@@ -1,9 +1,8 @@
 -- IMPORTANT NOTE : This is user config
 
 local M = {}
-
 M.ui = {
-   theme = "onedark",
+   theme = "tokyonight",
 
    -- theme toggle
    theme_toggler = false,
@@ -44,11 +43,12 @@ M.options = {
    relativenumber = false,
    numberwidth = 2,
    expandtab = true,
-   shiftwidth = 2,
+   shiftwidth = 4,
    smartindent = true,
    mapleader = " ",
    autosave = false,
    enable_insertNav = true, -- navigation in insertmode
+   tabstop = 4,
    -- used for updater
    update_url = "https://github.com/NvChad/NvChad",
    update_branch = "main",
@@ -73,11 +73,12 @@ M.plugin_status = {
    -- misc
    neoformat = true,
    vim_matchup = true,
-   autosave_nvim = true,
+   autosave_nvim = false,
    nvim_comment = true,
    neoscroll_nvim = true,
    telescope_media = true,
    cheatsheet = true,
+   vimtest = true,
 }
 
 -- make sure you dont use same keys twice
@@ -105,7 +106,7 @@ M.mappings = {
       sessionsave = "<leader>s",
    },
    telescope = {
-      live_grep = "<leader>fw",
+      live_grep = "<leader>fg",
       git_status = "<leader>gt",
       git_commits = "<leader>cm",
       find_files = "<leader>ff",
@@ -124,9 +125,9 @@ M.mappings = {
    bufferline = {
       new_buffer = "<S-t>",
       newtab = "<C-t>b",
-      close = "<S-x>", -- close a buffer with custom func in utils.lua
-      cycleNext = "<TAB>", -- next buffer
-      cyclePrev = "<S-Tab>", -- previous buffer
+      close = "<S-w>", -- close a buffer with custom func in utils.lua
+      cycleNext = "<C-l>", -- next buffer
+      cyclePrev = "<C-h>", -- previous buffer
    },
    fugitive = {
       Git = "<leader>gs",
@@ -144,8 +145,8 @@ M.mappings = {
    },
    -- navigation in insert mode
    insert_nav = {
-      forward = "<C-l>",
-      backward = "<C-h>",
+      forward = "<A-l>",
+      backward = "<A-h>",
       top_of_line = "<C-a>",
       end_of_line = "<C-e>",
       prev_line = "<C-j>",
@@ -155,8 +156,12 @@ M.mappings = {
       copywhole_file = "<C-a>",
       toggle_linenr = "<leader>n", -- show or hide line number
       theme_toggle = "<leader>x",
-      update_nvchad = "<leader>uu",
+      -- update_nvchad = "<leader>uu",
    },
+   vimtest = {
+       nearest = "<leader>tn",
+       latest = "<leader>tl",
+   }
 }
 
 return M

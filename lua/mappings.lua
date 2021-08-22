@@ -185,4 +185,10 @@ M.telescope_media = function()
    map("n", m.media_files, ":Telescope media_files <CR>", opt)
 end
 
+M.vimtest = function()
+    local m = user_map.vimtest
+    map("n", m.nearest, ":TestNearest<CR>", opt)
+    map("n", m.latest, ":TestLast<CR>", opt)
+end
+
 return M

@@ -310,4 +310,14 @@ return packer.startup(function()
          require("mappings").fugitive()
       end,
    }
+
+   use {
+      "vim-test/vim-test",
+      config = function()
+         require "plugins.vimtest"
+      end,
+      setup = function()
+         require("mappings").vimtest()
+      end,
+   }
 end)
