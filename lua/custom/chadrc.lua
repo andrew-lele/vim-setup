@@ -12,21 +12,21 @@ M.options, M.ui, M.mappings, M.plugins = {}, {}, {}, {}
 -- examples of setting relative number & changing theme:
 
 M.options = {
---    relativenumber = true,
-     relativenumber = false,
-     numberwidth = 2,
-     expandtab = true,
-     shiftwidth = 4,
-     smartindent = true,
-     mapleader = " ",
-     autosave = false,
-     enable_insertNav = true, -- navigation in insertmode
-     tabstop = 4,
-     mouse = "", -- disable mouse
--- }
+   --    relativenumber = true,
+   relativenumber = false,
+   numberwidth = 2,
+   expandtab = true,
+   shiftwidth = 4,
+   smartindent = true,
+   mapleader = " ",
+   autosave = false,
+   enable_insertNav = true, -- navigation in insertmode
+   tabstop = 4,
+   mouse = "", -- disable mouse
+   -- }
 
--- M.ui = {
---   theme = "nord"
+   -- M.ui = {
+   --   theme = "nord"
 }
 
 -- vim mappings
@@ -45,24 +45,24 @@ M.mappings = {
 M.mappings.plugins = {
    telescope = {
       live_grep = "<leader>fg",
-  },
-    bufferline = {
+   },
+   bufferline = {
       new_buffer = "<S-t>",
       -- newtab = "<C-t>b",
       -- close = "<S-x>", -- close a buffer with custom func in utils.lua
       next_buffer = "<C-l>", -- next buffer
       prev_buffer = "<C-h>", -- previous buffer
-    },
+   },
 }
 
 -- NvChad included plugin options & overrides
 M.plugins = {
    options = {
-     -- relative numbers in normal mode tool at the bottom of options.lua
-        lspconfig = {
+      -- relative numbers in normal mode tool at the bottom of options.lua
+      lspconfig = {
          -- path of file containing setups of different lsps (ex : "custom.plugins.lspconfig"), read the docs for more info
-         setup_lspconf = "custom.plugins.lspconfig"
-        },
+         setup_lspconf = "custom.plugins.lspconfig",
+      },
    },
    -- To change the Packer `config` of a plugin that comes with NvChad,
    -- add a table entry below matching the plugin github name
